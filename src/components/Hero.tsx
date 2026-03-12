@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -33,24 +33,15 @@ export default function Hero() {
               >
                 Contact Me <ArrowRight size={20} />
               </a>
-              {/* <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noreferrer"
-                className="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 border border-slate-700 transform hover:-translate-y-1"
-              >
-                Download Resume <Download size={20} />
-              </a> */}
             </div>
-          </div>
-          
+          </div>         
           <div className="relative hidden lg:block">
             <div className="relative w-[500px] h-[500px] mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/20 rounded-full animate-[spin_8s_linear_infinite]" />
               <div className="absolute inset-4 bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border border-slate-800 shadow-2xl">
                 {/* Profile Image */}
                 <img 
-                  src="/profile.jpeg" 
+                  src={`${import.meta.env.BASE_URL}profile.jpeg`}
                   alt="Manimaran Suriyan" 
                   className="w-full h-full object-cover rounded-full"
                 />
