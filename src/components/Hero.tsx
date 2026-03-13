@@ -9,7 +9,7 @@ export default function Hero() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left order-2 lg:order-1 mt-8 lg:mt-0">
             <div className="inline-flex items-center space-x-2 bg-slate-800/50 rounded-full px-4 py-2 mb-6 border border-slate-700/50 backdrop-blur-sm">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
@@ -35,10 +35,10 @@ export default function Hero() {
               </a>
             </div>
           </div>         
-          <div className="relative hidden lg:block">
-            <div className="relative w-[500px] h-[500px] mx-auto">
+          <div className="relative order-1 lg:order-2 w-full flex justify-center">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] xl:w-[500px] xl:h-[500px] mx-auto">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-500/20 to-blue-500/20 rounded-full animate-[spin_8s_linear_infinite]" />
-              <div className="absolute inset-4 bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border border-slate-800 shadow-2xl">
+              <div className="absolute inset-3 sm:inset-4 lg:inset-5 bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border border-slate-800 shadow-2xl">
                 {/* Profile Image */}
                 <img 
                   src={`${import.meta.env.BASE_URL}profile.jpeg`}
