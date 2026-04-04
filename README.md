@@ -1,73 +1,28 @@
-# React + TypeScript + Vite
+# Manimaran Suriyan - Full-Stack Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! I'm Manimaran Suriyan, a Full-Stack Developer with over 3+ years of experience building scalable, responsive, and user-friendly web applications.
 
-Currently, two official plugins are available:
+Welcome to my personal portfolio repository!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 About Me
 
-## React Compiler
+I specialize in the MERN stack, React, Next.js, Angular, TypeScript, and Tailwind CSS. I focus on building reusable components, clean architecture, and high-performance applications while delivering seamless user experiences. I'm passionate about turning complex ideas into fast, functional, and deeply interactive digital solutions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 What's in this Portfolio?
 
-## Expanding the ESLint configuration
+This portfolio serves as a central hub for my professional journey, showcasing:
+- **My Experience**: A timeline of my professional roles and responsibilities.
+- **My Skills**: A breakdown of the frontend, backend, and optimization technologies I use daily.
+- **My Work**: Demonstrations of high-performance web applications I've engineered.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📫 Let's Connect
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+I'm currently available for freelance work and open to full-time remote opportunities. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision!
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Email**: manimaransuriyan@gmail.com
+- **LinkedIn**: [linkedin.com/in/manimaran-suriyan-7586b7246](https://linkedin.com/in/manimaran-suriyan-7586b7246)
+- **GitHub**: [github.com/manimaransuriyan-27](https://github.com/manimaransuriyan-27)
+- **Instagram**: [iam_maara_](https://instagram.com/iam_maara_)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+*Thanks for visiting! Feel free to reach out if you'd like to collaborate.*

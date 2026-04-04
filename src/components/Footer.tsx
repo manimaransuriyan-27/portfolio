@@ -1,37 +1,60 @@
 import { Github, Linkedin, Target, Instagram } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { personalData } from '../constants/profile';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 border-t border-slate-900 py-12 relative overflow-hidden">
+    <footer className="bg-[#050505] border-t border-white/5 py-12 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-primary-500/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-          <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <Target className="text-primary-500" size={28} />
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-blue-500">
-              Manimaran Suriyan
+        <div className="flex flex-col md:flex-row justify-between items-center mb-10">
+          <motion.div 
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-3 mb-6 md:mb-0 cursor-pointer"
+          >
+            <Target className="text-cyan-400" size={32} />
+            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+              {personalData.name}
             </span>
-          </div>
+          </motion.div>
 
-          <div className="flex space-x-6">
-            <a href="https://github.com/manimaransuriyan-27" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+          <div className="flex space-x-8">
+            <motion.a 
+              whileHover={{ y: -5, scale: 1.1 }}
+              href={personalData.socialLinks.github} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="text-zinc-500 hover:text-cyan-400 transition-colors"
+            >
               <Github size={24} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+            </motion.a>
+            <motion.a 
+              whileHover={{ y: -5, scale: 1.1 }}
+              href={personalData.socialLinks.linkedin} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="text-zinc-500 hover:text-purple-400 transition-colors"
+            >
               <Linkedin size={24} />
-            </a>
-            <a href="https://instagram.com/iam_maara_" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors hover:scale-110 transform duration-200">
+            </motion.a>
+            <motion.a 
+              whileHover={{ y: -5, scale: 1.1 }}
+              href={personalData.socialLinks.instagram} 
+              target="_blank" 
+              rel="noreferrer" 
+              className="text-zinc-500 hover:text-pink-400 transition-colors"
+            >
               <Instagram size={24} />
-            </a>
+            </motion.a>
           </div>
         </div>
 
-        <div className="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row justify-center items-center text-sm text-slate-500">
-          <p>&copy; {currentYear} Manimaran Suriyan. All rights reserved.</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-center items-center text-sm text-zinc-500 font-medium tracking-wide">
+          <p>&copy; {currentYear} {personalData.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>
