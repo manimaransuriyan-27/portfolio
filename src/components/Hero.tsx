@@ -55,7 +55,7 @@ export default function Hero() {
               className="font-extrabold tracking-tight text-white mb-6 leading-tight flex flex-col gap-2"
             >
               <span className="text-3xl sm:text-4xl lg:text-3xl xl:text-4xl text-zinc-100 font-bold">Hello, I'm</span>
-              <span className="text-[2.5rem] leading-none sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 py-1 sm:py-2 drop-shadow-sm tracking-tight w-full overflow-hidden text-clip font-extrabold">
+              <span className="text-[clamp(1.8rem,10vw,2.5rem)] leading-none sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 py-1 sm:py-2 drop-shadow-sm tracking-tight w-full overflow-hidden text-clip font-extrabold">
                 {personalData.name}
               </span>
             </motion.h1>
@@ -72,7 +72,7 @@ export default function Hero() {
           <div 
             className="relative order-1 lg:order-2 w-full flex justify-center lg:justify-end"
           >
-            <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px]">
+            <div className="relative w-64 h-64 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px]">
               {/* Spinning gradient ring */}
               <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 via-purple-500/30 to-transparent rounded-full animate-[spin_10s_linear_infinite] blur-xl" />
               <div className="absolute inset-2 bg-gradient-to-bl from-purple-500/40 via-cyan-500/20 to-transparent rounded-full animate-[spin_15s_linear_infinite_reverse]" />

@@ -4,6 +4,14 @@ import { motion, type Variants } from 'framer-motion';
 export default function Experience() {
   const experiences = [
     {
+      role: 'Senior Frontend Developer',
+      company: 'Applepro IT Solutions Pvt Ltd',
+      location: 'Chennai',
+      date: 'Jan 2026 – Present',
+      description: 'As a Senior Frontend Developer, architected scalable React applications, built reusable UI systems with dynamic forms, managed state with custom hooks and TanStack Query, optimized performance through code splitting and lazy loading, and upheld high code quality with strict TypeScript standards and reviews.',
+      icon: <Briefcase className="text-red-400" size={24} />
+    },
+    {
       role: 'UI/UX Software Engineer',
       company: 'Steerwise Solutions Pvt Ltd',
       location: 'Coimbatore',
@@ -21,7 +29,7 @@ export default function Experience() {
     },
     {
       role: 'Frontend Developer',
-      company: 'Apple Pro IT Solutions Pvt Ltd',
+      company: 'Applepro IT Solutions Pvt Ltd',
       location: 'Chennai',
       date: 'Apr 2021 – Sept 2022',
       description: 'Developed financial platform UI using Angular, built responsive and reusable UI components, implemented TypeScript-based architecture, and integrated frontend features with backend APIs.',
@@ -92,11 +100,11 @@ export default function Experience() {
                 <div className={`md:w-[45%] w-full ${isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto md:text-left'} pt-[2px]`}>
                   <motion.div 
                     whileHover={{ y: -5 }}
-                    className="bg-[#111]/80 p-8 rounded-2xl border border-white/5 group-hover:bg-[#161616] group-hover:border-white/10 transition-colors duration-300 backdrop-blur-md relative overflow-hidden"
+                    className="bg-[#111]/80 p-5 sm:p-8 rounded-2xl border border-white/5 group-hover:bg-[#161616] group-hover:border-white/10 transition-colors duration-300 backdrop-blur-md relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/5 group-hover:to-purple-500/5 transition-colors duration-500 pointer-events-none" />
 
-                    <div className={`flex flex-col md:flex-row ${isEven ? 'md:justify-end' : 'md:justify-start'} gap-3 mb-6 relative z-10`}>
+                    <div className={`flex flex-col sm:flex-row ${isEven ? 'md:justify-end' : 'md:justify-start'} gap-3 mb-6 relative z-10`}>
                       <span className="inline-block py-1 px-4 w-max bg-cyan-500/10 rounded-full text-xs font-semibold text-cyan-400 tracking-wider border border-cyan-500/20">
                         {exp.date}
                       </span>

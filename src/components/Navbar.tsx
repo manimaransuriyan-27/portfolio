@@ -125,9 +125,9 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0f0f0f] border-t border-white/5 absolute w-full left-0 top-full overflow-hidden"
+            className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-2xl border-t border-white/5 absolute w-full left-0 top-full overflow-hidden"
           >
-            <div className="px-4 pt-4 pb-6 space-y-2">
+            <div className="px-4 pt-4 pb-8 space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
