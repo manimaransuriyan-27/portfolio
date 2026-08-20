@@ -20,4 +20,15 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // shadcn/ui-generated primitives (including third-party registries like
+    // Magic UI) intentionally co-export cva variants alongside their
+    // component and use effect patterns that trip stricter lint rules here.
+    // We own this code but don't hand-edit vendor internals for lint purism.
+    files: ['src/components/ui/**/*.{ts,tsx}'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+      'react-hooks/set-state-in-effect': 'off',
+    },
+  },
 ])

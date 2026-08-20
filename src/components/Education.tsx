@@ -1,5 +1,7 @@
 import { GraduationCap, Award } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function Education() {
   const containerVariants: Variants = {
@@ -33,7 +35,7 @@ export default function Education() {
       degree: 'B.E Computer Science and Engineering',
       institution: 'Annai Mathammal Sheela Engineering College, Namakkal',
       year: '2016 – 2020',
-      icon: <GraduationCap size={24} className="text-cyan-400" />
+      icon: <GraduationCap size={24} className="text-cyan-600 dark:text-cyan-400" />
     }
   ];
 
@@ -41,22 +43,22 @@ export default function Education() {
     {
       title: 'Full Stack Development (MERN Stack)',
       issuer: 'Crampete Learning Institute Pvt Ltd, Chennai',
-      icon: <Award size={24} className="text-purple-400" />
+      icon: <Award size={24} className="text-purple-600 dark:text-purple-400" />
     },
     {
       title: 'Next.js Certification',
       issuer: 'GUVI Geek Networks (HCL & Google Partner)',
-      icon: <Award size={24} className="text-pink-400" />
+      icon: <Award size={24} className="text-pink-600 dark:text-pink-400" />
     }
   ];
 
   return (
-    <section id="education" className="py-32 bg-[#0a0a0a] text-white border-b border-white/5 relative">
-      <div className="absolute right-0 bottom-0 w-80 h-80 bg-purple-500/10 rounded-full blur-[150px] pointer-events-none" />
+    <section id="education" className="py-32 bg-background text-foreground border-b border-border relative">
+      <div className="absolute right-0 bottom-0 w-80 h-80 bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+
           {/* Education Column */}
           <motion.div
             initial="hidden"
@@ -66,34 +68,38 @@ export default function Education() {
           >
             <motion.div variants={itemVariants} className="flex items-center gap-4 mb-12">
               <div className="p-3 bg-cyan-500/10 rounded-xl">
-                <GraduationCap size={32} className="text-cyan-400" />
+                <GraduationCap size={32} className="text-cyan-600 dark:text-cyan-400" />
               </div>
               <h2 className="text-4xl font-bold">
-                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Education</span>
+                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-500">Education</span>
               </h2>
             </motion.div>
-            
+
             <div className="space-y-8">
               {education.map((edu, idx) => (
-                <motion.div 
-                  key={idx} 
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
-                  className="bg-[#111] border border-white/5 p-8 rounded-3xl hover:bg-white/5 hover:border-cyan-500/30 transition-all duration-300 backdrop-blur-sm group shadow-lg"
-                >
-                  <div className="w-14 h-14 bg-black/50 rounded-2xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
-                    {edu.icon}
-                  </div>
-                  <span className="text-cyan-400 font-bold text-sm tracking-widest uppercase bg-cyan-500/10 px-4 py-1.5 rounded-full border border-cyan-500/20 mb-5 inline-block">
-                    {edu.year}
-                  </span>
-                  <h3 className="text-2xl font-bold text-zinc-100 mb-3 leading-tight group-hover:text-cyan-400 transition-colors">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-zinc-400 font-medium flex items-center gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500 inline-block shadow-[0_0_8px_rgba(168,85,247,0.8)]"></span>
-                    {edu.institution}
-                  </p>
+                <motion.div key={idx} variants={itemVariants} whileHover={{ y: -5 }}>
+                  <Card className="group rounded-3xl border-border shadow-lg ring-0 backdrop-blur-sm transition-all duration-300 hover:bg-accent/40 hover:border-cyan-500/30 [--card-spacing:--spacing(8)]">
+                    <CardHeader className="gap-5">
+                      <div className="w-14 h-14 bg-muted rounded-2xl flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform">
+                        {edu.icon}
+                      </div>
+                      <Badge
+                        variant="outline"
+                        className="h-auto w-max rounded-full border-cyan-500/20 bg-cyan-500/10 px-4 py-1.5 text-sm font-bold uppercase tracking-widest text-cyan-700 dark:text-cyan-400"
+                      >
+                        {edu.year}
+                      </Badge>
+                    </CardHeader>
+                    <CardContent>
+                      <h3 className="text-2xl font-bold text-foreground mb-3 leading-tight group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-muted-foreground font-medium flex items-center gap-3">
+                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500 inline-block shadow-[0_0_8px_rgba(168,85,247,0.8)]"></span>
+                        {edu.institution}
+                      </p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               ))}
             </div>
@@ -108,37 +114,36 @@ export default function Education() {
           >
             <motion.div variants={itemRightVariants} className="flex items-center gap-4 mb-12">
               <div className="p-3 bg-purple-500/10 rounded-xl">
-                <Award size={32} className="text-purple-400" />
+                <Award size={32} className="text-purple-600 dark:text-purple-400" />
               </div>
               <h2 className="text-4xl font-bold">
-                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Licenses & Certifications</span>
+                My <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">Licenses & Certifications</span>
               </h2>
             </motion.div>
-            
+
             <div className="space-y-6">
               {certifications.map((cert, idx) => (
-                <motion.div 
-                  key={idx} 
-                  variants={itemRightVariants}
-                  whileHover={{ x: 5 }}
-                  className="bg-[#111] border border-white/5 p-6 rounded-2xl hover:bg-white/5 hover:border-purple-500/30 transition-all duration-300 flex flex-col sm:flex-row items-start gap-6 group shadow-md"
-                >
-                  <div className="w-14 h-14 bg-black/50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-inner">
-                    {cert.icon}
-                  </div>
-                  <div className="mt-1">
-                    <h3 className="text-xl font-bold text-zinc-100 mb-2 group-hover:text-purple-400 transition-colors">
-                      {cert.title}
-                    </h3>
-                    <p className="text-zinc-400 text-sm leading-relaxed">
-                      {cert.issuer}
-                    </p>
-                  </div>
+                <motion.div key={idx} variants={itemRightVariants} whileHover={{ x: 5 }}>
+                  <Card className="group rounded-2xl border-border shadow-md ring-0 transition-all duration-300 hover:bg-accent/40 hover:border-purple-500/30 [--card-spacing:--spacing(6)]">
+                    <CardContent className="flex flex-col sm:flex-row items-start gap-6">
+                      <div className="w-14 h-14 bg-muted rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform shadow-inner">
+                        {cert.icon}
+                      </div>
+                      <div className="mt-1">
+                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                          {cert.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">
+                          {cert.issuer}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>
